@@ -7,11 +7,7 @@ export const Header = () => {
   return (
     <div className="header">
       <section className="header__container">
-        <button
-          className="menu-btn"
-          //onClick={handleMenu}
-          onClick={() => setOpenMenu(!openMenu)}
-        >
+        <button className="menu-btn" onClick={() => setOpenMenu(!openMenu)}>
           <img
             src={dataHeader.menu}
             alt="icono menu hamburguesa"
