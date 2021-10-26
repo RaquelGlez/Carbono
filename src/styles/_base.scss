@@ -1,0 +1,42 @@
+@use "./settings" as *;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background-color: $main_bgn;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.none {
+  display: none;
+}
+
+h3 {
+  font-size: 48px;
+  line-height: 56px;
+}
+
+h4 {
+  font-size: 34px;
+  line-height: 36px;
+}
+
+h5 {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 24px;
+}
