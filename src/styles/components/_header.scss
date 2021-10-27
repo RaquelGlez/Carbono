@@ -26,7 +26,7 @@
     width: 0.6rem;
     height: 0.6rem;
     margin: 0 0.25rem;
-    background-color: $blanco_toroto;
+    //background-color: $blanco_toroto;
   }
 
   a {
@@ -118,7 +118,8 @@
     grid-column: 1/2;
     grid-row: 1/2;
     z-index: 999;
-    background-color: $blanco_toroto;
+    // background-color: $blanco_toroto;
+    background-color: $azul_toroto;
     border: 0;
     outline: thin solid $azul_toroto;
     cursor: pointer;
