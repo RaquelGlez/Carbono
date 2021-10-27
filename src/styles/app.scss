@@ -1,4 +1,4 @@
 @forward "./base";
 @forward "./components/header";
 @forward "./components/home";
-//@use "./settings" as *;
+@forward "./components/buttons"; //@use "./settings" as *;

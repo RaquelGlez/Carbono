@@ -30,7 +30,7 @@ const titleCard = "Nombre del proyecto escrito en dos líneas, lo que sea.";
 const textCard =
   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took.";
 
-export const dataHeader = {
+const dataHeader = {
   logo: logo,
   menu: hamburguer_menu_icon,
   closeMenu: close_icon,
@@ -40,7 +40,7 @@ export const map = {
   img: tooltip_icon,
 };
 
-export const proyects = [
+const proyects = [
   {
     id: 1,
     img: img_project_1,
@@ -71,10 +71,16 @@ export const proyects = [
   },
 ];
 
-export const dataFooter = {
+const dataButtons = {
+  serviceIcon: service_icon,
+};
+
+const dataFooter = {
   imgFacebook: facebook_icon,
   imgLinkedin: linkedin_icon,
   imgTwitter: twitter_icon,
   imgInstagram: instagram_icon,
   imgLogo: logo,
 };
+
+export { dataHeader, proyects, dataButtons, dataFooter };

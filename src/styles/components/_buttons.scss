@@ -1,0 +1,51 @@
+@use "../settings" as *;
+.button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: $main_font;
+  font-weight: 500;
+  font-size: 14px;
+  height: 3rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  width: 100%;
+
+  &.black {
+    color: $blanco_toroto;
+    background-color: $negro_toroto;
+    border: none;
+  }
+
+  &.white {
+    color: $negro_toroto;
+    border: 1px solid $negro_toroto;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+}
+
+.button-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid $negro_toroto;
+  border-radius: 2.5rem;
+  color: $negro_toroto;
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+  &.button-service__text {
+    font-family: $main_font;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    //line-height: 1.5rem;
+  }
+  img {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+}
