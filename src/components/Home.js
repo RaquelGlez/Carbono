@@ -58,20 +58,15 @@ export const Home = () => {
         /> */}
       </div>
       <div className="home__content">
-        <h3>Somos desarrolladores de proyectos</h3>
-        <h6>
+        <h3 className="home__content-h3">Somos desarrolladores de proyectos</h3>
+        <h6 className="home__content-h6">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s.
         </h6>
-        <ButtonPrimary text="Proponer un proyecto" color="white" />
-        <br />
-        <br />
-        <br />
-        <ButtonService text="Botón de servicio --------------ddsvsdvsvedverw" />
-        <ButtonService text="Botón" />
-        <br />
-        <br />
+        <div className="home__content-button">
+          <ButtonPrimary text="Proponer un proyecto" color="white" />
+        </div>
       </div>
     </div>
   );
