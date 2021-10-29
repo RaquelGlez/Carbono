@@ -1,6 +1,5 @@
 import { dataButtons } from "../assets/data";
 const ButtonPrimary = ({ text, color, handle }) => {
-  // console.log(text, color);
   return (
     <button
       //onClick={handle}
@@ -11,10 +10,11 @@ const ButtonPrimary = ({ text, color, handle }) => {
   );
 };
 
-const ButtonService = ({ text }) => {
-  // console.log(text);
+const ButtonService = ({ text, component }) => {
+  // component option:
+  // card or detail
   return (
-    <button className={`button-service`}>
+    <button className={`button-service ${component}`}>
       <img src={dataButtons.serviceIcon} alt="etiqueta de servicio" />
       <span className="button-service__text">{text}</span>
     </button>

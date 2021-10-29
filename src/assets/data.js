@@ -40,35 +40,11 @@ export const map = {
   img: tooltip_icon,
 };
 
-const proyects = [
-  {
-    id: 1,
-    img: img_project_1,
-    imgText: imageTextCard,
-    titleCard: titleCard,
-    textCard: textCard,
-  },
-  {
-    id: 2,
-    img: img_project_2,
-    imgText: imageTextCard,
-    titleCard: titleCard,
-    textCard: textCard,
-  },
-  {
-    id: 3,
-    img: img_project_3,
-    imgText: imageTextCard,
-    titleCard: titleCard,
-    textCard: textCard,
-  },
-  {
-    id: 4,
-    img: img_project_4,
-    imgText: imageTextCard,
-    titleCard: titleCard,
-    textCard: textCard,
-  },
+const imgProyects = [
+  img_project_1,
+  img_project_2,
+  img_project_3,
+  img_project_4,
 ];
 
 const dataButtons = {
@@ -83,4 +59,4 @@ const dataFooter = {
   imgLogo: logo,
 };
 
-export { dataHeader, proyects, dataButtons, dataFooter };
+export { dataHeader, imgProyects, dataButtons, dataFooter };

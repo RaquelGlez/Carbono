@@ -1,0 +1,117 @@
+@use "../settings" as *;
+
+$lines_title: 2;
+$lines_description: 5;
+
+@mixin line_clamp($number) {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.projectCard__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  color: $negro_toroto;
+  font-family: $main_font;
+  padding: 0;
+  margin: 1rem 1rem 0 0;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  flex-grow: 1;
+  order: 1;
+  width: 512px;
+}
+
+.projectCard__img {
+  border-radius: 20px 20px 0px 0px;
+  height: 172px;
+  width: 100%;
+  object-fit: cover;
+  // object-fit: fill;
+}
+
+.projectCard__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  grid-template-rows: 50px 90px 110px 130px 1fr;
+
+  background-color: $blanco_toroto;
+  border-radius: 0px 0px 20px 20px;
+  padding: 1.5rem 2rem 2rem;
+  width: 100%;
+}
+.projectCard__location {
+  font-size: 20px;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  margin: 0rem 0;
+}
+
+.projectCard__title {
+  font-size: 34px;
+  line-height: 2.25rem;
+  margin: 8px 0px;
+  @include line_clamp($lines_title);
+}
+
+.projectCard__description {
+  font-size: 14px;
+  line-height: 1.25rem;
+  letter-spacing: 0.25px;
+  margin: 0.5rem 0;
+  @include line_clamp($lines_description);
+}
+
+.projectCard__services {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.projectCard__btn-view-project {
+  width: 100%;
+}
+
+@media (max-width: 575.98px) {
+  .projectCard__container {
+    margin: 1rem 1rem 0;
+    height: inherit;
+    width: 328px;
+    min-height: inherit;
+  }
+
+  .projectCard__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projectCard__location {
+    font-size: 12px;
+    line-height: 1rem;
+    margin: 4px 0;
+  }
+
+  .projectCard__title {
+    font-size: 16px;
+    line-height: 1.25rem;
+    margin: 4px 0;
+  }
+
+  .projectCard__description {
+    font-size: 12px;
+    margin: 1rem 0;
+  }
+
+  .projectCard__services {
+    display: none;
+  }
+}
