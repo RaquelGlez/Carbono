@@ -1,7 +1,6 @@
 export const getProjects = async () => {
   const urlString = "https://fieldops-api.toroto.mx/api/projects";
   const res = await fetch(urlString);
-  console.log("res data", res);
   if (!res.ok) {
     const { url, status, statusText } = res;
     if (status === 400) {
@@ -14,7 +13,6 @@ export const getProjects = async () => {
 
   const projectsData = await res.json();
   const projects = projectsData.data;
-  console.log("projects", projectsData.data);
   return projects;
 };
 
@@ -40,38 +38,32 @@ export const getProject = async (id) => {
   return project;
 };
 
-// Caso prueba markers con popups
+// Caso markers con popups
+export const getProjectsMap = () => {
+  return new Promise(function (resolve, reject) {
+    const mapProjects = [];
 
-export const dataMap = async () => {
-  const dataApi = await getProjects();
-  console.log("data para mapa", dataApi);
-
-  const keysMap = ["id", "location", "name", "description"];
-  let objetItem = {};
-  let dataMap = [];
-
-  dataApi.forEach((item) => {
-    //console.log("item de dataApi", item);
-
-    //let point = item;
-    console.log("point de dataApi", item);
-    const keys = Object.keys(item);
-    console.log("keys de dataApi", keys);
-
-    keys.forEach((key, index) => {
-      //  console.log("data keys foreach----", `${key}: ${point[key]}`);
-      if (key === "images") {
-        console.log("esto es una imagen");
-      } else if (key === "geometry") {
-        console.log("estas son coordenadas");
-      } else if (keysMap.includes(key)) {
-        console.log("keys en el else", key);
-        objetItem[key] = item[key];
-        console.log("objetItem luego del else", objetItem);
-      }
-      return objetItem;
-    });
+    getProjects()
+      .then((projects) => {
+        projects.map((item) => {
+          mapProjects.push({
+            id: item.id,
+            location: item.location,
+            name: item.name,
+            description: item.description,
+            longitude: item.geometry.coordinates[0][0][0],
+            latitude: item.geometry.coordinates[0][0][1],
+            //ubication: item.geometry.coordinates[0][0],
+            services: [],
+          });
+          resolve(mapProjects);
+          return mapProjects;
+        });
+      })
+      .catch((err) => {
+        const msgError = "Ha ocurrido un error al obtener los datos";
+        console.log(`${msgError}`, err);
+        reject(msgError);
+      });
   });
-  dataMap.push(objetItem);
-  console.log("data map luego del else", dataMap);
 };

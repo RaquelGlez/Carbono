@@ -17,12 +17,13 @@ const Projects = () => {
     });
   };
 
+  // console.log("item en projects cards list---", projects);
   return (
     <div className="projects__container">
       <h3 className="projects__title">Todos nuestros proyectos</h3>
       <section className="projects__cards">
         {projects.map((project, index) => (
-          <ProjectCard {...project} key={index} />
+          <ProjectCard {...project} mainComponent="project-cards" key={index} />
         ))}
       </section>
     </div>
