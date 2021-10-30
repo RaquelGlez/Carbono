@@ -57,7 +57,9 @@ $lines_description: 5;
   width: 100%;
 
   &.map-cards {
-    grid-template-rows: 50px 90px 110px 0px 0px;
+    // grid-template-rows: 50px 90px 110px 0px 0px;
+    display: flex;
+    flex-direction: column;
   }
 }
 .projectCard__location {

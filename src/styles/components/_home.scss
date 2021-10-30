@@ -1,5 +1,52 @@
+@use "../settings" as *;
 .home__container {
-  // margin-top: 60px;
-  background-color: lemonchiffon;
-  // height: 90vh;
+  font-family: $main_font;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 0.5fr;
+  height: 95vh;
+}
+
+.home__map {
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+
+.home__content {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 340px;
+  margin: 80px;
+  z-index: 10;
+}
+
+.home__content-h3 {
+  font-size: 48px;
+  line-height: 3.5rem;
+  margin: 1rem 0;
+}
+
+.home__content-h6 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.home__list-btn {
+  grid-column: 1/3;
+  grid-row: 3/4;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  width: 50%;
+
+  span {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 10px;
+  }
 }

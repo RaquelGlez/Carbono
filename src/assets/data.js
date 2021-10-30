@@ -59,4 +59,4 @@ const dataFooter = {
   imgLogo: logo,
 };
 
-export { dataHeader, imgProyects, dataButtons, dataFooter };
+export { chevron_down, dataHeader, imgProyects, dataButtons, dataFooter };

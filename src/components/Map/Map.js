@@ -10,10 +10,12 @@ const MAPBOX_TOKEN =
 const Map = () => {
   const [viewport, setViewport] = useState({
     width: "100vw",
-    height: "90vh",
-    latitude: 24.1439,
-    longitude: -110.315,
-    zoom: 4.5,
+    height: "95vh",
+    //  latitude: 24.1439,
+    //  longitude: -110.315,
+    latitude: 22.744857,
+    longitude: -109.286823,
+    zoom: 4.4,
     dragPan: false,
     dragRotate: false,
     scrollZoom: false,
@@ -57,7 +59,6 @@ const Map = () => {
             closeButton={false}
             closeOnClick={true}
             onClose={setPopupInfo}
-            className="popupMap"
           >
             <ProjectCard {...popupInfo} mainComponent="map-cards" />
           </Popup>
