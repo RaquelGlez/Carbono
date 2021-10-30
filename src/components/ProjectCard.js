@@ -22,10 +22,14 @@ const ProjectCard = (props) => {
   const imgProjectDefault = imgProyects[0];
   let img = imgProject[id] || imgProjectDefault;
 
+  const viewProjectDetail = () => {
+    handleDetail(id);
+  };
+
   return (
     <article
       className={`projectCard__container ${mainComponent}`}
-      onClick={mainComponent === "map-cards" ? handleDetail : null}
+      onClick={mainComponent === "map-cards" ? viewProjectDetail : null}
     >
       <img src={img} className="projectCard__img" alt="imagen del proyecto" />
       <div className={`projectCard__content ${mainComponent}`}>
@@ -41,7 +45,7 @@ const ProjectCard = (props) => {
           <ButtonPrimary
             color="white"
             text="ver proyecto completo"
-            handle={handleDetail}
+            handle={viewProjectDetail}
           />
         </div>
       </div>

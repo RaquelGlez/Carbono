@@ -7,12 +7,15 @@ import ProjectDetails from "./components/ProjectDetails";
 
 function App() {
   const [activeDetail, setActiveDetail] = useState(null);
+  const [projectId, setProjectId] = useState(null);
 
-  const handleRenderDetail = (e) => {
+  const handleRenderDetail = (projectId) => {
     if (activeDetail) {
       setActiveDetail(null);
+      setProjectId(null);
     } else {
       setActiveDetail(true);
+      setProjectId(projectId);
     }
   };
 
@@ -25,7 +28,7 @@ function App() {
           <Projects handleDetail={handleRenderDetail} />
         </div>
       ) : (
-        <ProjectDetails />
+        <ProjectDetails projectId={projectId} />
       )}
       <Footer />
     </div>

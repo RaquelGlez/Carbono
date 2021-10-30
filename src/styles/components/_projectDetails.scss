@@ -1,0 +1,52 @@
+@use "../settings" as *;
+
+.details__container {
+  font-family: $main_font;
+  color: $negro_toroto;
+  margin: 0 auto;
+  width: 75%;
+  // display: flex;
+  // flex-direction: column;
+  // background-color: aquamarine;
+}
+
+.details__iframe-map {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // background-color: violet;
+}
+
+.details__develop-project {
+  h4 {
+    font-size: 24px;
+    line-height: 2.25rem;
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    margin: 1.5rem 0;
+  }
+}
+
+.details__develop-project-btn {
+  margin: 2.5rem 0 7rem 0;
+}
+///
+///
+///
+///
+///
+///
+///
+///
+
+@media (max-width: 575.98px) {
+  .details__container {
+    width: 95%;
+  }
+}
