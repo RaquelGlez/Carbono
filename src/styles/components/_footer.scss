@@ -1,0 +1,21 @@
+@use "../settings" as *;
+.footer__container {
+  background-color: $azul_toroto;
+}
+
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  padding: 0 12.5rem;
+  a {
+    margin: 0 40px 0 0;
+  }
+}
+
+.footer__logo {
+  a {
+    margin: 0 0 0 0;
+  }
+}
