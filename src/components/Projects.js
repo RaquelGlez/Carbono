@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getProjects } from "../helpers/getProjects";
 import ProjectCard from "./ProjectCard";
-const Projects = () => {
+const Projects = ({ handleDetail }) => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -19,7 +19,12 @@ const Projects = () => {
       <h3 className="projects__title">Todos nuestros proyectos</h3>
       <section className="projects__cards">
         {projects.map((project, index) => (
-          <ProjectCard {...project} mainComponent="project-cards" key={index} />
+          <ProjectCard
+            {...project}
+            mainComponent="project-cards"
+            key={index}
+            handleDetail={handleDetail}
+          />
         ))}
       </section>
     </div>

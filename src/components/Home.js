@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Map from "./Map/Map";
 import { ButtonPrimary } from "../helpers/Buttons";
 import { chevron_down } from "../assets/data";
 
-export const Home = () => {
+export const Home = ({ handleDetail }) => {
   return (
     <div className="home__container">
       <div className="home__map">
-        <Map />
+        <Map handleDetail={handleDetail} />
       </div>
       <div className="home__mobile-image"></div>
       <div className="home__content">

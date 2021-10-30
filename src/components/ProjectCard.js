@@ -3,8 +3,15 @@ import { ButtonPrimary, ButtonService } from "../helpers/Buttons";
 import { imgProyects } from "../assets/data";
 
 const ProjectCard = (props) => {
-  // console.log("props de card", props);
-  const { id, location, name, description, services, mainComponent } = props;
+  const {
+    id,
+    location,
+    name,
+    description,
+    services,
+    mainComponent,
+    handleDetail,
+  } = props;
   const imgProject = {
     P001: imgProyects[0],
     P002: imgProyects[1],
@@ -16,23 +23,26 @@ const ProjectCard = (props) => {
   let img = imgProject[id] || imgProjectDefault;
 
   return (
-    <article className={`projectCard__container ${mainComponent}`}>
-      {/* <article className="projectCard__container"> */}
+    <article
+      className={`projectCard__container ${mainComponent}`}
+      onClick={mainComponent === "map-cards" ? handleDetail : null}
+    >
       <img src={img} className="projectCard__img" alt="imagen del proyecto" />
       <div className={`projectCard__content ${mainComponent}`}>
-        {/* <div className="projectCard__content"> */}
         <h6 className="projectCard__location">{location}</h6>
         <h4 className="projectCard__title">{name}</h4>
         <p className="projectCard__description">{description}</p>
         <div className={`projectCard__services ${mainComponent}`}>
-          {/* <div className="projectCard__services"> */}
           {services.map((service, index) => (
             <ButtonService text={service} key={index} component="card" />
           ))}
         </div>
         <div className={`projectCard__btn-view-project ${mainComponent}`}>
-          {/* <div className="projectCard__btn-view-project"> */}
-          <ButtonPrimary color="white" text="ver proyecto completo" />
+          <ButtonPrimary
+            color="white"
+            text="ver proyecto completo"
+            handle={handleDetail}
+          />
         </div>
       </div>
     </article>

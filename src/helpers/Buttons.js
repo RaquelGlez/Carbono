@@ -1,10 +1,7 @@
 import { dataButtons } from "../assets/data";
 const ButtonPrimary = ({ text, color, handle }) => {
   return (
-    <button
-      //onClick={handle}
-      className={`button-primary ${color}`}
-    >
+    <button onClick={handle} className={`button-primary ${color}`}>
       {text}
     </button>
   );

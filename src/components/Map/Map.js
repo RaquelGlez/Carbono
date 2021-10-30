@@ -7,7 +7,7 @@ import Pins from "./Pins";
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoicmFxdWVsLWdvbnphbGV6IiwiYSI6ImNrdXV0OXhpdzRrbXoydXBod28xNjhtcm4ifQ.GoIBzGc8Pt6lhIbKM-v4CA";
 
-const Map = () => {
+const Map = ({ handleDetail }) => {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "95vh",
@@ -59,8 +59,13 @@ const Map = () => {
             closeButton={false}
             closeOnClick={true}
             onClose={setPopupInfo}
+            // captureClick={false}
           >
-            <ProjectCard {...popupInfo} mainComponent="map-cards" />
+            <ProjectCard
+              {...popupInfo}
+              mainComponent="map-cards"
+              handleDetail={handleDetail}
+            />
           </Popup>
         )}
       </MapGL>
