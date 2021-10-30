@@ -10,6 +10,7 @@ export const Home = () => {
       <div className="home__map">
         <Map />
       </div>
+      <div className="home__mobile-image"></div>
       <div className="home__content">
         <h3 className="home__content-h3">Somos desarrolladores de proyectos</h3>
         <h6 className="home__content-h6">

@@ -23,7 +23,14 @@
 }
 
 @media (max-width: 575.98px) {
+  .projects__container {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    max-width: inherit;
+  }
+
   .projects__title {
     font-size: 1.5rem;
+    margin: 1.5rem 1rem;
   }
 }

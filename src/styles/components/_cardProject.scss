@@ -106,10 +106,13 @@ $lines_description: 5;
 
 @media (max-width: 575.98px) {
   .projectCard__container {
-    margin: 1rem 1rem 0;
     height: inherit;
-    width: 328px;
     min-height: inherit;
+    &.project-cards {
+      margin: 1rem 1rem 0;
+      //width: 328px;
+      width: 80%;
+    }
   }
 
   .projectCard__content {
