@@ -100,4 +100,63 @@
 }
 
 @media (max-width: 575.98px) {
+  .modal {
+    padding: 0;
+  }
+
+  .impModal__container {
+    max-width: 100%;
+
+    img:nth-child(2) {
+      display: none;
+    }
+  }
+
+  .impModal__close {
+    top: 1rem;
+    right: 1rem;
+  }
+
+  .impModal__content-title {
+    h4 {
+      margin: 0 0.5rem;
+      font-size: 16px;
+      line-height: 1.25rem;
+    }
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .impModal__content {
+    margin: 3rem 1.5rem;
+    padding: 0 1rem;
+
+    h6 {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+
+  .impModal__content-bullets {
+    li {
+      font-size: 14px;
+      line-height: 1rem;
+      letter-spacing: 0.5px;
+      margin: 4px 0;
+    }
+  }
+
+  .impModal__content-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 0.5rem;
+  }
 }

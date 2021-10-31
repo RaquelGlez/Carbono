@@ -12,6 +12,7 @@ import img_project_gallery_5 from "./images/img_project_gallery_5.png";
 import img_project_gallery_6 from "./images/img_project_gallery_6.png";
 import chevron_down from "./svg/chevron_down.svg";
 import close_icon from "./svg/close_icon.svg";
+import close_black_icon from "./svg/close_black_icon.svg";
 import external_link from "./svg/external_link.svg";
 import hamburguer_menu_icon from "./svg/hamburguer_menu_icon.svg";
 import logo from "./svg/logo.svg";
@@ -146,6 +147,7 @@ const dataFooter = {
 const imgImp = {
   imgModal: img_modal_actvidad,
   serviceIcon: service_icon,
+  iconCloseBlack: close_black_icon,
   iconClose: close_icon,
 };
 

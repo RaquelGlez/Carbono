@@ -3,12 +3,23 @@ import { ButtonPrimary } from "../../helpers/Buttons";
 import { imgImp } from "../../assets/data";
 
 const ImplementationModal = ({ isOpen, closeModal }) => {
-  const checkmark = String.fromCharCode(26);
+  const getIconClose = () => {
+    let img = null;
+    if (window.innerWidth <= 575.98) {
+      img = imgImp.iconCloseBlack;
+    } else {
+      img = imgImp.iconClose;
+    }
+    return img;
+  };
+
+  let imgClose = getIconClose();
+
   return (
     <div className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
       <div className="impModal__container">
         <button className="impModal__close" onClick={closeModal}>
-          <img src={imgImp.iconClose} alt="Imagen de modal" />
+          {<img src={imgClose} alt="Imagen de modal" />}
         </button>
         <img src={imgImp.imgModal} alt="Imagen de modal" />
         <div className="impModal__content">
