@@ -23,12 +23,14 @@ function App() {
     <div>
       <Header />
       {!activeDetail ? (
-        <div>
+        <div className="animate__animated animate__fadeIn animate__faster">
           <Home handleDetail={handleRenderDetail} />
           <Projects handleDetail={handleRenderDetail} />
         </div>
       ) : (
-        <ProjectDetails projectId={projectId} />
+        <div className="animate__animated animate__fadeIn animate__faster">
+          <ProjectDetails projectId={projectId} />
+        </div>
       )}
       <Footer />
     </div>

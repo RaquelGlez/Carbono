@@ -143,4 +143,17 @@ const dataFooter = {
   ),
 };
 
-export { chevron_down, dataHeader, imgProyects, dataButtons, dataFooter };
+const imgImp = {
+  imgModal: img_modal_actvidad,
+  serviceIcon: service_icon,
+  iconClose: close_icon,
+};
+
+export {
+  chevron_down,
+  dataHeader,
+  imgProyects,
+  dataButtons,
+  dataFooter,
+  imgImp,
+};

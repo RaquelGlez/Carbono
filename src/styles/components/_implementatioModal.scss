@@ -1,0 +1,103 @@
+@use "../settings" as *;
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  padding: 1rem 0;
+
+  &.is-open {
+    display: flex;
+  }
+}
+
+.impModal__container {
+  position: relative;
+  background-color: $blanco_toroto;
+  max-width: 75%;
+  //height: 70vh;
+  border-radius: 20px;
+
+  img {
+    border-radius: 20px 20px 0px 0px;
+    height: 190px;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.impModal__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background-color: transparent;
+  border: none;
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.impModal__content-title {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+
+  h4 {
+    display: flex;
+    margin: 0 1rem;
+  }
+
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.impModal__content {
+  margin: 2rem;
+  padding: 0 4rem;
+
+  h6 {
+    color: $gris_1;
+    flex-grow: 0;
+    letter-spacing: 0.15px;
+    margin: 0;
+  }
+
+  p {
+    color: $gris_1;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin: 1.5rem 0;
+  }
+}
+
+.impModal__content-bullets {
+  padding: 0 1rem;
+
+  li {
+    color: $gris_1;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 2px 0;
+  }
+}
+
+.impModal__content-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+@media (max-width: 575.98px) {
+}

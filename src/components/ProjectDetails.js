@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { ButtonPrimary, ButtonService } from "../helpers/Buttons";
-import { getImgProject } from "../helpers/getImgProject";
 import { getProject } from "../helpers/getProjects";
 import {
-  DetailDevelopProject,
-  DetailImpact,
   DetailsCard,
+  DetailImpact,
+  DetailDevelopProject,
 } from "./ProjectsDetails/detailSections";
+import ImplementationBtn from "./ProjectsDetails/ImplementationBtn";
 import { IframeMap } from "./ProjectsDetails/IframeMap";
 
 export const ProjectDetails = ({ projectId }) => {
@@ -38,14 +37,14 @@ export const ProjectDetails = ({ projectId }) => {
     activities,
   } = project;
 
-  let img = getImgProject(projectId);
-
   return (
     <div className="details__container" id="detail">
       <DetailsCard {...project} />
-      <div className="details__implementation">
-        <h3>Implementación</h3>
-        <div>Aquí va o se llama al modal</div>
+      <div className="details__implementation-container ">
+        <div className="">
+          <h3>Implementación</h3>
+          <ImplementationBtn />
+        </div>
         <h5>Actividades de restauracion</h5>
         <div className="details__accordion">
           <div>Acordeon......</div>
