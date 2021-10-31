@@ -47,9 +47,9 @@ export const ProjectDetails = ({ projectId }) => {
           <div>Acordeon......</div>
         </div>
         <h5>Mapa de obras</h5>
-        <div className="details__iframe-map">
+        {/* <div className="details__iframe-map">
           <IframeMap />
-        </div>
+        </div> */}
         <h5>Galeria de imagenes</h5>
         <div className="details__carousel">
           <div>... Aquí va el corrousel</div>

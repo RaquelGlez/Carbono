@@ -3,7 +3,6 @@ import { getImgProject } from "../../helpers/getImgProject";
 
 export const DetailsCard = (props) => {
   const { id, name, location, description, services, problem } = props;
-
   let img = getImgProject(id);
 
   return (

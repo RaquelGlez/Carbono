@@ -2,12 +2,10 @@
 
 .detailsCard__container {
   margin-top: 2rem;
-  // background-color: violet;
 }
 
 .detailsCard__ubication {
   display: flex;
-  // background-color: yellow;
 
   h3 {
     color: $gris_1;
@@ -36,6 +34,7 @@
   border-radius: 20px;
   margin: 0 0 0 1rem;
   max-height: 700px;
+  object-fit: cover;
 }
 
 .detailsCard__problematic {
@@ -52,9 +51,60 @@
     margin: 2rem 0;
   }
 }
-//
-//
-//
-//
+
 @media (max-width: 575.98px) {
+  .detailsCard__container {
+    margin-top: 0rem;
+  }
+
+  .detailsCard__ubication {
+    flex-direction: column-reverse;
+    h3 {
+      font-size: 24px;
+      line-height: 28px;
+      margin: 0.5rem 1rem;
+    }
+
+    h5 {
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.18px;
+      margin: 0.5rem 1rem;
+    }
+  }
+
+  .detailsCard__left-section {
+    margin: 0;
+    margin-top: -1rem;
+    padding-top: 2rem;
+    background-color: $blanco_toroto;
+    border-radius: 20px 20px 0px 0px;
+    z-index: 1;
+  }
+
+  .detailsCard__description {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 1rem;
+  }
+
+  .detailsCard__img {
+    width: 100%;
+    border-radius: 0px;
+    margin: 0;
+    max-height: 700px;
+  }
+
+  .detailsCard__problematic {
+    h5 {
+      font-size: 14px;
+      line-height: 1rem;
+      margin: 1rem;
+    }
+    p {
+      font-size: 14px;
+      line-height: 1rem;
+      margin: 1rem;
+    }
+  }
 }
