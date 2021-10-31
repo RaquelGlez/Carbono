@@ -1,6 +1,7 @@
 import React from "react";
 import { ButtonPrimary, ButtonService } from "../helpers/Buttons";
 import { imgProyects } from "../assets/data";
+import { getImgProject } from "../helpers/getImgProject";
 
 const ProjectCard = (props) => {
   const {
@@ -12,15 +13,8 @@ const ProjectCard = (props) => {
     mainComponent,
     handleDetail,
   } = props;
-  const imgProject = {
-    P001: imgProyects[0],
-    P002: imgProyects[1],
-    P003: imgProyects[2],
-    P004: imgProyects[3],
-  };
 
-  const imgProjectDefault = imgProyects[0];
-  let img = imgProject[id] || imgProjectDefault;
+  let img = getImgProject(id);
 
   const viewProjectDetail = () => {
     handleDetail(id);

@@ -2,13 +2,16 @@
 
 .details__container {
   font-family: $main_font;
-  color: $negro_toroto;
   margin: 0 auto;
   width: 75%;
+  color: $negro_toroto;
   // display: flex;
   // flex-direction: column;
   // background-color: aquamarine;
 }
+
+//
+//
 
 .details__iframe-map {
   display: flex;

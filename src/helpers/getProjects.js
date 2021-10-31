@@ -21,7 +21,6 @@ export const getProject = async (id) => {
   const urlProject = `${urlString}/${id}`;
 
   const res = await fetch(urlProject);
-  console.log("res data", res);
   if (!res.ok) {
     const { url, status, statusText } = res;
     if (status === 400) {
@@ -33,8 +32,7 @@ export const getProject = async (id) => {
   }
 
   const projectData = await res.json();
-  const project = projectData.data;
-  console.log("project---", projectData.data);
+  const project = projectData.data[0];
   return project;
 };
 

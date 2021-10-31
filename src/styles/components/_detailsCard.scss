@@ -1,0 +1,60 @@
+@use "../settings" as *;
+
+.detailsCard__container {
+  margin-top: 2rem;
+  // background-color: violet;
+}
+
+.detailsCard__ubication {
+  display: flex;
+  // background-color: yellow;
+
+  h3 {
+    color: $gris_1;
+    letter-spacing: 0.18px;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+
+  h5 {
+    color: $gris_1;
+    margin: 0.5rem 0;
+  }
+}
+
+.detailsCard__left-section {
+  margin: 0 1rem 0 0;
+}
+.detailsCard__description {
+  color: $gris_2;
+  font-size: 20px;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+}
+
+.detailsCard__img {
+  width: 50%;
+  border-radius: 20px;
+  margin: 0 0 0 1rem;
+  max-height: 700px;
+}
+
+.detailsCard__problematic {
+  color: $gris_1;
+  h5 {
+    line-height: 1.5rem;
+    letter-spacing: 0.18px;
+    margin: 2rem 0;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+    margin: 2rem 0;
+  }
+}
+//
+//
+//
+//
+@media (max-width: 575.98px) {
+}

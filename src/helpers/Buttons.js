@@ -13,7 +13,7 @@ const ButtonService = ({ text, component }) => {
   return (
     <button className={`button-service ${component}`}>
       <img src={dataButtons.serviceIcon} alt="etiqueta de servicio" />
-      <span className="button-service__text">{text}</span>
+      <span className={`button-service__text ${component}`}>{text}</span>
     </button>
   );
 };

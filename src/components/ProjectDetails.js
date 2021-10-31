@@ -1,13 +1,44 @@
-import React from "react";
-import { ButtonPrimary } from "../helpers/Buttons";
+import React, { useState, useEffect } from "react";
+import { ButtonPrimary, ButtonService } from "../helpers/Buttons";
+import { getImgProject } from "../helpers/getImgProject";
+import { getProject } from "../helpers/getProjects";
+import { DetailsCard } from "./ProjectsDetails/detailSections";
 import { IframeMap } from "./ProjectsDetails/IframeMap";
 
-export const ProjectDetails = (props) => {
-  console.log("props en projectsdetail:::", props);
+export const ProjectDetails = ({ projectId }) => {
+  const [project, setProject] = useState({});
+  useEffect(() => {
+    getDataProject(projectId);
+  }, [projectId]);
+
+  const getDataProject = (projectId) => {
+    getProject(projectId)
+      .then((item) => {
+        console.log("data project details", projectId);
+        setProject(item);
+      })
+      .catch((err) => {
+        console.log("hubo un error al obtener los datos", err);
+        setProject(null);
+      });
+  };
+
+  const {
+    name,
+    location,
+    description,
+    problem,
+    services,
+    impact,
+    images,
+    activities,
+  } = project;
+
+  let img = getImgProject(projectId);
 
   return (
     <div className="details__container" id="detail">
-      <div className="details__card">Detalle de la tarjeta</div>
+      <DetailsCard {...project} />
       <div className="details__implementation">
         <h3>Implementación</h3>
         <div>Aquí va o se llama al modal</div>
