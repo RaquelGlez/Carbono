@@ -29,6 +29,22 @@ export const DetailsCard = (props) => {
   );
 };
 
+export const DetailImpact = ({ impactData }) => {
+  return (
+    <div className="detailsImpact__container">
+      <h3 className="detailsImpact__title">Impacto</h3>
+      <div className="detailsImpact__cards">
+        {impactData.map((impact, index) => (
+          <div className="detailsImpact__card" key={index}>
+            <div className="detailsImpact__card-value">{impact.value}</div>
+            <div className="detailsImpact__card-name">{impact.name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export const DetailDevelopProject = () => {
   return (
     <div className="details__develop-project">

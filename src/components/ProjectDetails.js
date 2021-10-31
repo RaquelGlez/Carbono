@@ -4,6 +4,7 @@ import { getImgProject } from "../helpers/getImgProject";
 import { getProject } from "../helpers/getProjects";
 import {
   DetailDevelopProject,
+  DetailImpact,
   DetailsCard,
 } from "./ProjectsDetails/detailSections";
 import { IframeMap } from "./ProjectsDetails/IframeMap";
@@ -59,8 +60,7 @@ export const ProjectDetails = ({ projectId }) => {
         </div>
       </div>
       <div className="details__impact">
-        <h3>Impacto</h3>
-        <div>... Aqui van las tarjetas con los puntos de impacto</div>
+        {impact ? <DetailImpact impactData={impact} /> : null}
       </div>
       <DetailDevelopProject />
     </div>
