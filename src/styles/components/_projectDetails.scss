@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  // background-color: violet;
 }
 
 .details__develop-project {
@@ -29,7 +28,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.5rem;
     letter-spacing: 0.5px;
     margin: 1.5rem 0;
@@ -51,6 +50,24 @@
 @media (max-width: 575.98px) {
   .details__container {
     width: 100%;
-    //padding: 1rem;
+  }
+
+  .details__develop-project {
+    h4 {
+      font-size: 16px;
+      line-height: 1.25rem;
+      margin: 1rem 0;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1rem;
+      margin: 1rem;
+      text-align: center;
+    }
+  }
+
+  .details__develop-project-btn {
+    margin: 1.5rem 1rem 3rem 1rem;
   }
 }

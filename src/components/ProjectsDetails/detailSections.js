@@ -1,4 +1,4 @@
-import { ButtonService } from "../../helpers/Buttons";
+import { ButtonPrimary, ButtonService } from "../../helpers/Buttons";
 import { getImgProject } from "../../helpers/getImgProject";
 
 export const DetailsCard = (props) => {
@@ -24,6 +24,25 @@ export const DetailsCard = (props) => {
       <div className="detailsCard__problematic">
         <h5>Problemática</h5>
         <p>{problem}</p>
+      </div>
+    </div>
+  );
+};
+
+export const DetailDevelopProject = () => {
+  return (
+    <div className="details__develop-project">
+      <h4>Somos desarrolladores de proyectos</h4>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged.
+      </p>
+      <div className="details__develop-project-btn">
+        <ButtonPrimary text="Proponer un proyecto" color="black" />
       </div>
     </div>
   );
