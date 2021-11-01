@@ -5,12 +5,30 @@
   margin: 0 auto;
   width: 75%;
   color: $negro_toroto;
-  // display: flex;
-  // flex-direction: column;
-  // background-color: aquamarine;
 }
 
 .details__implementation-container {
+  margin-top: 7rem;
+
+  h5 {
+    color: $gris_1;
+    letter-spacing: 0.18px;
+    margin: 3rem 0;
+  }
+}
+
+.details__implementation-title {
+  display: flex;
+  gap: 1rem;
+
+  h3 {
+    margin: 0;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+  }
 }
 
 //
@@ -59,9 +77,28 @@
     width: 100%;
   }
 
+  .details__implementation-container {
+    margin: 4rem 1rem 0;
+
+    h5 {
+      font-size: 14px;
+      line-height: 1rem;
+      letter-spacing: 0.18px;
+      margin: 1rem 0;
+    }
+  }
+
+  .details__implementation-title {
+    h3 {
+      font-size: 24px;
+      line-height: 1.75rem;
+    }
+  }
+
   .details__impact {
     margin: 4rem 1rem;
   }
+
   .details__develop-project {
     h4 {
       font-size: 16px;

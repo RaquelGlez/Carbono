@@ -158,4 +158,5 @@ export {
   dataButtons,
   dataFooter,
   imgImp,
+  tooltip_icon,
 };

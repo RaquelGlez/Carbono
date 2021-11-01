@@ -41,12 +41,12 @@ export const ProjectDetails = ({ projectId }) => {
     <div className="details__container" id="detail">
       <DetailsCard {...project} />
       <div className="details__implementation-container ">
-        <div className="">
+        <div className="details__implementation-title">
           <h3>Implementación</h3>
           <ImplementationBtn />
         </div>
-        <h5>Actividades de restauracion</h5>
-        <div className="details__accordion">
+        <div className="details__restauration-container">
+          <h5>Actividades de restauracion</h5>
           <div>Acordeon......</div>
         </div>
         <h5>Mapa de obras</h5>

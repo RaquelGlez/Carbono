@@ -19,7 +19,7 @@ const ImplementationModal = ({ isOpen, closeModal }) => {
     <div className={`modal ${isOpen && "is-open"}`} onClick={closeModal}>
       <div className="impModal__container">
         <button className="impModal__close" onClick={closeModal}>
-          {<img src={imgClose} alt="Imagen de modal" />}
+          {<img src={imgClose} alt="Icono de cierre" />}
         </button>
         <img src={imgImp.imgModal} alt="Imagen de modal" />
         <div className="impModal__content">

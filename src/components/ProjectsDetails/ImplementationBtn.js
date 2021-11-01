@@ -1,4 +1,5 @@
 import React from "react";
+import { tooltip_icon } from "../../assets/data";
 import { useModal } from "../../helpers/useModal";
 import ImplementationModal from "./ImplementationModal";
 
@@ -7,7 +8,9 @@ const ImplementationBtn = () => {
 
   return (
     <>
-      <button onClick={openModal}>boton de modal</button>
+      <button onClick={openModal}>
+        <img src={tooltip_icon} alt="Icono de tooltip" />
+      </button>
       <ImplementationModal isOpen={isOpenModal} closeModal={closeMOdal} />
     </>
   );
