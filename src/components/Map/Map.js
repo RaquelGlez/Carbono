@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MapGL, { Popup } from "react-map-gl";
+import MapGL, { Popup, StaticMap } from "react-map-gl";
 import { getProjectsMap } from "../../helpers/getProjects";
 import ProjectCard from "../ProjectCard";
 import Pins from "./Pins";
@@ -11,14 +11,16 @@ const Map = ({ handleDetail }) => {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "95vh",
-    //  latitude: 24.1439,
-    //  longitude: -110.315,
     latitude: 22.744857,
     longitude: -109.286823,
     zoom: 4.4,
+    //latitude: 24.1439,
+    //longitude: -110.315,
+    minZoom: 4.4,
+    maxZoom: 4.4,
     dragPan: false,
     dragRotate: false,
-    scrollZoom: false,
+    scrollZoom: true,
     touchZoom: false,
     touchRotate: false,
     keyboard: false,
@@ -59,7 +61,8 @@ const Map = ({ handleDetail }) => {
             closeButton={false}
             closeOnClick={true}
             onClose={setPopupInfo}
-            // captureClick={false}
+            captureScroll={false}
+            //captureClick={true}
           >
             <ProjectCard
               {...popupInfo}
