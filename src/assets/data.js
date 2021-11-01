@@ -20,6 +20,8 @@ import next_icon from "./svg/next_icon.svg";
 import previous_icon from "./svg/previous_icon.svg";
 import service_icon from "./svg/service_icon.svg";
 import tooltip_icon from "./svg/tooltip_icon.svg";
+import chevron_up from "./svg/chevron_up.svg";
+import chevron_down2 from "./svg/chevron-compact-down.svg";
 //import header_img_mobile from "./images/header_img_mobile.png";
 //import linkedin_icon from "./svg/linkedin_icon.svg";
 //import instagram_icon from "./svg/instagram_icon.svg";
@@ -45,6 +47,11 @@ const imgProyects = [
 
 const dataButtons = {
   serviceIcon: service_icon,
+};
+
+const accordion = {
+  chevronUp: chevron_up,
+  chevronDown: chevron_down2,
 };
 
 const dataFooter = {
@@ -159,4 +166,5 @@ export {
   dataFooter,
   imgImp,
   tooltip_icon,
+  accordion,
 };

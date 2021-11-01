@@ -2,11 +2,13 @@ import React, { useState, useEffect } from "react";
 import { getProject } from "../helpers/getProjects";
 import {
   DetailsCard,
+  Restoration,
   DetailImpact,
   DetailDevelopProject,
 } from "./ProjectsDetails/detailSections";
 import ImplementationBtn from "./ProjectsDetails/ImplementationBtn";
 import { IframeMap } from "./ProjectsDetails/IframeMap";
+/* import { Restoration } from "./ProjectsDetails/Restoration"; */
 
 export const ProjectDetails = ({ projectId }) => {
   const [project, setProject] = useState({});
@@ -17,25 +19,15 @@ export const ProjectDetails = ({ projectId }) => {
   const getDataProject = (projectId) => {
     getProject(projectId)
       .then((item) => {
-        console.log("data project details", projectId);
         setProject(item);
       })
       .catch((err) => {
         console.log("hubo un error al obtener los datos", err);
-        setProject(null);
+        setProject({});
       });
   };
 
-  const {
-    name,
-    location,
-    description,
-    problem,
-    services,
-    impact,
-    images,
-    activities,
-  } = project;
+  const { impact, images, activities } = project;
 
   return (
     <div className="details__container" id="detail">
@@ -45,9 +37,9 @@ export const ProjectDetails = ({ projectId }) => {
           <h3>Implementación</h3>
           <ImplementationBtn />
         </div>
-        <div className="details__restauration-container">
+        <div className="details__restoration-container">
           <h5>Actividades de restauracion</h5>
-          <div>Acordeon......</div>
+          {activities && <Restoration activities={activities} />}
         </div>
         <h5>Mapa de obras</h5>
         {/* <div className="details__iframe-map">
@@ -59,7 +51,7 @@ export const ProjectDetails = ({ projectId }) => {
         </div>
       </div>
       <div className="details__impact">
-        {impact ? <DetailImpact impactData={impact} /> : null}
+        {impact && <DetailImpact impactData={impact} />}
       </div>
       <DetailDevelopProject />
     </div>

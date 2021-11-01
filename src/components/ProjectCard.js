@@ -1,6 +1,5 @@
 import React from "react";
 import { ButtonPrimary, ButtonService } from "../helpers/Buttons";
-import { imgProyects } from "../assets/data";
 import { getImgProject } from "../helpers/getImgProject";
 
 const ProjectCard = (props) => {

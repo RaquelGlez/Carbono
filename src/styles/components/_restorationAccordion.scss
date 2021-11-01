@@ -1,0 +1,42 @@
+@use "../settings" as *;
+.restAccordion__container {
+  color: $gris_1;
+}
+
+.restAccordion__item-title {
+  border-top: 1px solid $gris_2;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5rem;
+  letter-spacing: 0.15px;
+  padding: 0.5rem 1rem;
+  h6 {
+    margin: 0;
+  }
+}
+
+.restAccordion__item-content {
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem 1.5rem;
+}
+
+@media (max-width: 575.98px) {
+  .restAccordion__item-title {
+    padding: 0.2rem 1rem;
+
+    h6 {
+      font-size: 12px;
+      line-height: 1rem;
+      letter-spacing: 0.15px;
+    }
+  }
+
+  .restAccordion__item-content {
+    font-size: 14px;
+    line-height: 1rem;
+    padding: 0.5rem 1rem 1rem;
+  }
+}

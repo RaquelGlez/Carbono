@@ -1,5 +1,6 @@
 import { ButtonPrimary, ButtonService } from "../../helpers/Buttons";
 import { getImgProject } from "../../helpers/getImgProject";
+import { RestAccordion } from "./RestAccordion";
 
 export const DetailsCard = (props) => {
   const { id, name, location, description, services, problem } = props;
@@ -11,11 +12,10 @@ export const DetailsCard = (props) => {
         <div className="detailsCard__left-section">
           <h5>{location}</h5>
           <h3>{name}</h3>
-          {services
-            ? services.map((service, index) => (
-                <ButtonService text={service} key={index} component="detail" />
-              ))
-            : null}
+          {services &&
+            services.map((service, index) => (
+              <ButtonService text={service} key={index} component="detail" />
+            ))}
 
           <p className="detailsCard__description">{description}</p>
         </div>
@@ -25,6 +25,21 @@ export const DetailsCard = (props) => {
         <h5>Problemática</h5>
         <p>{problem}</p>
       </div>
+    </div>
+  );
+};
+
+export const Restoration = ({ activities }) => {
+  console.log("Restoration", activities);
+  return (
+    <div className="restAccordion__container">
+      {activities.map((activity, index) => (
+        <RestAccordion
+          name={activity.name}
+          description={activity.description}
+          key={index}
+        />
+      ))}
     </div>
   );
 };
