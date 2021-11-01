@@ -6,10 +6,10 @@ const Footer = () => {
     <div className="footer__container" id="footer">
       <div className="footer__main">
         <div className="footer__rrss">
-          <a href="#footer">{dataFooter.imgFacebook}</a>
-          <a href="#footer">{dataFooter.imgLinkedin}</a>
-          <a href="#footer">{dataFooter.imgInstagram}</a>
-          <a href="#footer">{dataFooter.imgTwitter}</a>
+          <a href="/">{dataFooter.imgFacebook}</a>
+          <a href="/">{dataFooter.imgLinkedin}</a>
+          <a href="/">{dataFooter.imgInstagram}</a>
+          <a href="/">{dataFooter.imgTwitter}</a>
         </div>
         <div className="footer__logo">
           <a href="/">{dataFooter.imgLogo}</a>

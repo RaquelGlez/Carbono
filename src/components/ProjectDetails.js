@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { getProject } from "../helpers/getProjects";
+import ImplementationBtn from "./ProjectsDetails/ImplementationBtn";
+import { IframeMap } from "./ProjectsDetails/IframeMap";
 import {
   DetailsCard,
   Restoration,
   DetailImpact,
   DetailDevelopProject,
 } from "./ProjectsDetails/detailSections";
-import ImplementationBtn from "./ProjectsDetails/ImplementationBtn";
-import { IframeMap } from "./ProjectsDetails/IframeMap";
-/* import { Restoration } from "./ProjectsDetails/Restoration"; */
 
 export const ProjectDetails = ({ projectId }) => {
   const [project, setProject] = useState({});
@@ -42,13 +41,13 @@ export const ProjectDetails = ({ projectId }) => {
           {activities && <Restoration activities={activities} />}
         </div>
         <h5>Mapa de obras</h5>
-        {/* <div className="details__iframe-map">
+        <div className="details__iframe-map">
           <IframeMap />
-        </div> */}
-        <h5>Galeria de imagenes</h5>
-        <div className="details__carousel">
-          <div>... Aquí va el corrousel</div>
         </div>
+        {/*  <h5>Galeria de imagenes</h5>
+        <div className="details__carousel">
+          <div>carousel</div>
+        </div> */}
       </div>
       <div className="details__impact">
         {impact && <DetailImpact impactData={impact} />}

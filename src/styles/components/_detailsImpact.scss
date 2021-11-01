@@ -52,8 +52,13 @@
     margin: 1.5rem 0;
   }
 
+  .detailsImpact__cards {
+    justify-content: space-around;
+  }
+
   .detailsImpact__card {
     width: 160px;
+    margin-top: 0.5rem;
   }
 
   .detailsImpact__card-value {
