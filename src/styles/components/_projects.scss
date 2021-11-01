@@ -22,6 +22,12 @@
   align-items: flex-start;
 }
 
+.projects__chart {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 @media (max-width: 575.98px) {
   .projects__container {
     margin: 0 auto;

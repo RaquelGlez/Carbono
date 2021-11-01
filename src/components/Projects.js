@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getProjects } from "../helpers/getProjects";
+import { Chart } from "./Charts/Chart";
 import ProjectCard from "./ProjectCard";
 const Projects = ({ handleDetail }) => {
   const [projects, setProjects] = useState([]);
@@ -26,6 +27,10 @@ const Projects = ({ handleDetail }) => {
             handleDetail={handleDetail}
           />
         ))}
+      </section>
+      <h3 className="projects__title">Algunos indicadores</h3>
+      <section className="projects__chart">
+        <Chart />
       </section>
     </div>
   );
