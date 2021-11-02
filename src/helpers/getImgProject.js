@@ -1,4 +1,5 @@
 import { imgProyects } from "../assets/data";
+
 export const getImgProject = (id) => {
   const imgProject = {
     P001: imgProyects[0],

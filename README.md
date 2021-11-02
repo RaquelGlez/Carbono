@@ -7,7 +7,7 @@ En ella se muestran los proyectos en los que están trabajando, y el detalle de 
 
 ## Construido con
 
-Carbono es una página web responsive. Se ha construido con herramientas como React, Sass, Mapbox y Highcharts .
+Carbono es una página web disponible en versión desktop y mobile. Se ha construido con herramientas como React, Sass, Mapbox y Highcharts .
 
 &nbsp;
 

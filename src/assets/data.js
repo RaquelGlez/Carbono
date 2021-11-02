@@ -1,27 +1,27 @@
-import banner_background from "./images/banner_background_image_1.png";
 import img_modal_actvidad from "./images/img_modal_actvidad.png";
 import img_project_1 from "./images/img_project_1.png";
 import img_project_2 from "./images/img_project_2.png";
 import img_project_3 from "./images/img_project_3.png";
 import img_project_4 from "./images/img_project_4.png";
-import img_project_gallery_1 from "./images/img_project_gallery_1.png";
-import img_project_gallery_2 from "./images/img_project_gallery_2.png";
-import img_project_gallery_3 from "./images/img_project_gallery_3.png";
-import img_project_gallery_4 from "./images/img_project_gallery_4.png";
-import img_project_gallery_5 from "./images/img_project_gallery_5.png";
-import img_project_gallery_6 from "./images/img_project_gallery_6.png";
 import chevron_down from "./svg/chevron_down.svg";
 import close_icon from "./svg/close_icon.svg";
 import close_black_icon from "./svg/close_black_icon.svg";
 import external_link from "./svg/external_link.svg";
 import hamburguer_menu_icon from "./svg/hamburguer_menu_icon.svg";
 import logo from "./svg/logo.svg";
-import next_icon from "./svg/next_icon.svg";
-import previous_icon from "./svg/previous_icon.svg";
 import service_icon from "./svg/service_icon.svg";
 import tooltip_icon from "./svg/tooltip_icon.svg";
 import chevron_up from "./svg/chevron_up.svg";
 import chevron_down2 from "./svg/chevron-compact-down.svg";
+/* import img_project_gallery_2 from "./images/img_project_gallery_2.png";
+import img_project_gallery_3 from "./images/img_project_gallery_3.png";
+import img_project_gallery_4 from "./images/img_project_gallery_4.png";
+import img_project_gallery_5 from "./images/img_project_gallery_5.png";
+import img_project_gallery_6 from "./images/img_project_gallery_6.png";
+import img_project_gallery_1 from "./images/img_project_gallery_1.png";
+import next_icon from "./svg/next_icon.svg";
+import previous_icon from "./svg/previous_icon.svg";
+import banner_background from "./images/banner_background_image_1.png"; */
 //import header_img_mobile from "./images/header_img_mobile.png";
 //import linkedin_icon from "./svg/linkedin_icon.svg";
 //import instagram_icon from "./svg/instagram_icon.svg";
@@ -52,6 +52,13 @@ const dataButtons = {
 const accordion = {
   chevronUp: chevron_up,
   chevronDown: chevron_down2,
+};
+
+const imgImp = {
+  imgModal: img_modal_actvidad,
+  serviceIcon: service_icon,
+  iconCloseBlack: close_black_icon,
+  iconClose: close_icon,
 };
 
 const dataFooter = {
@@ -149,13 +156,6 @@ const dataFooter = {
       />
     </svg>
   ),
-};
-
-const imgImp = {
-  imgModal: img_modal_actvidad,
-  serviceIcon: service_icon,
-  iconCloseBlack: close_black_icon,
-  iconClose: close_icon,
 };
 
 export {

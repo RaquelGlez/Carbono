@@ -26,9 +26,11 @@ const ProjectCard = (props) => {
     >
       <img src={img} className="projectCard__img" alt="imagen del proyecto" />
       <div className={`projectCard__content ${mainComponent}`}>
-        <h6 className="projectCard__location">{location}</h6>
-        <h4 className="projectCard__title">{name}</h4>
-        <p className="projectCard__description">{description}</p>
+        <h6 className={`projectCard__location ${mainComponent}`}>{location}</h6>
+        <h4 className={`projectCard__title ${mainComponent}`}>{name}</h4>
+        <p className={`projectCard__description ${mainComponent}`}>
+          {description}
+        </p>
         <div className={`projectCard__services ${mainComponent}`}>
           {services.map((service, index) => (
             <ButtonService text={service} key={index} component="card" />

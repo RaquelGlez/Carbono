@@ -30,7 +30,6 @@ export const DetailsCard = (props) => {
 };
 
 export const Restoration = ({ activities }) => {
-  console.log("Restoration", activities);
   return (
     <div className="restAccordion__container">
       {activities.map((activity, index) => (

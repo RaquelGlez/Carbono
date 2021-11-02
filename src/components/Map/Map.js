@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MapGL, { Popup, StaticMap } from "react-map-gl";
+import MapGL, { Popup } from "react-map-gl";
+//import MapGL, { Popup, StaticMap } from "react-map-gl";
 import { getProjectsMap } from "../../helpers/getProjects";
 import ProjectCard from "../ProjectCard";
 import Pins from "./Pins";
